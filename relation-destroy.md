@@ -41,4 +41,4 @@ RESPONSE FIELDS:
 
 EXAMPLES:
 ---------
-- **user & type**, [http://api.dagje.in/1/relation/destroy/](http://api.dagje.in/1/relation/destroy/) with post data "user=9dae1fdbeace59c2008d388d6d3cf242&type=following"
+- **user & type**, [http://api.feest.je/1/relation/destroy/](http://api.feest.je/1/relation/destroy/) with post data "user=9dae1fdbeace59c2008d388d6d3cf242&type=following"
