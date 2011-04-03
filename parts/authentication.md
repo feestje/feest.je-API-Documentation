@@ -3,7 +3,7 @@ Authentication
 
 This page will tell you somthing about the authentication that is used in
 the feest.je API. If you would need some authentication to execute a call,
-you basically need to be logged in with a Feest.je accout.
+you basically need to be logged in with a Feest.je account. All this authentication happens with the usage of [OAuth](OAuth.md)
 
 Authentication False
 --------------------
