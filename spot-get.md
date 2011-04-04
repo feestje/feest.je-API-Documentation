@@ -38,6 +38,9 @@ PARAMETERS:
 **Extra:**
 
  - **Sort**(*string*), if relevancy, sorts spots by similarity to your searchterm (q only), if distance, sorts by distance from your current location, if week, sorts spots by weeks, if month, sorts spots by month, if day, sorts spots by day, if undefined, does nothing.
+ - **radius**(*int*), set the range in which to return spots. Range in kilometers. Defaulted to 1.
+ - **limit**(*int*), set the number of spots to return. Defaulted to 25.
+ - **skip**(*int*), set the number of spots that should be skipped. Defaulted to 0.
  
 
 RESPONSE FIELDS:
@@ -63,5 +66,4 @@ EXAMPLES:
  - **spot**, [http://api.feest.je/1/spot/get?spot=607582b687a1d3af4981e6467301ec20](http://api.feest.je/1/spot/get?spot=607582b687a1d3af4981e6467301ec20)
  - **user**, [http://api.feest.je/1/spot/get/?user=9dae1fdbeace59c2008d388d6d3cf242](http://api.feest.je/1/spot/get/?user=9dae1fdbeace59c2008d388d6d3cf242)
  - **sort**,
-
 
