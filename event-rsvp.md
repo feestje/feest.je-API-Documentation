@@ -1,10 +1,10 @@
 URL:
 ----
-[http://api.feest.je/1/medal/get](http://api.feest.je/1/medal/get)
+[http://api.feest.je/1/event/rsvp/](http://api.feest.je/1/event/rsvp/)
 
 REQUEST METHOD:
 ---------------
-GET
+POST
 
 RATE LIMIT:
 -----------
@@ -12,44 +12,39 @@ True, see: [rate limiting](parts/rate-limiting.md)
 
 AUTHENTICATION REQUIRED:
 ------------------------
-False, see: [authentication](parts/authentication.md)
+True, see: [authentication](parts/authentication.md)
 
 SUMMARY:
 --------
-This call returns an array filled with all the available medals.
+This call sets the user to a state of attending to the given event.
 
 PARAMETERS:
 -----------
 
 **Required:**
 
- - None
- 
+ - **event**(*string*), the id of the event that the user wants to sign up to.
+
 **Optional:**
 
- - **user**(*string*), returns the medals that were earned by the given user(*userid*)
- - **medal**(*string*), returns only the medal with the given medalid.
- - **earned**(*bool*), if true, returns only medals that were earned by the user, if false, returns only medals that were not earned by the user. Requires user.
- - **limit**(*int*), sets the number of medals that should be returned. Defaulted to 25.
- - **skip**(*int*), sets the number of medals that should be skipped. Defaulted to 0.
+ - None
 
 **Extra:**
 
- - None
-
+ - **status**(*string*), sets the status for the user. Can be attending, declined, unsure. Defaulted to attending.
+- **activity**(*bool*), if true, the rsvp will be handled as an activity, if false, it will not. Defaulted to true.
+ 
 RESPONSE FIELDS:
 ----------------
 
- - **_id**, shows the id of the medal.
- - **name**, shows the name of the medal.
- - **slug**, shows the nameslug of the medal.
- - **points**, shows the points that are earned with earning this medal.
- - **user**, shows information whether an user earned the medal, see:[medal user](parts/medal-user.md)
+ - **_id**, shows the id of the event that you just signed up to.
+ - **event**, contains an array containing the id of the event, see: [rsvp event](parts/event.md)
+ - **user**, contains an array containing the id of the user, see: [rsvp user](parts/user.md)
+ - **start**, contains an array containing the starting time of the event, see: [rsvp start](parts/start-or-end.md)
+ - **end**, contains an array containing the ending time of the event, see: [rsvp end](parts/start-or-end.md)
+ - **status**, the status of the user regarding the event.
  
-
 EXAMPLES:
 ---------
-
- - **user**, [http://api.feest.je/1/medal/get/?user=9dae1fdbeace59c2008d388d6d3cf242](http://api.feest.je/1/medal/get/?user=9dae1fdbeace59c2008d388d6d3cf242)
- - **medal**, [http://api.feest.je/1/medal/get/?medal=36e9041569cd540a2441ca6809f16b14](http://api.feest.je/1/medal/get/?medal=36e9041569cd540a2441ca6809f16b14)
- - **earned**, [http://api.feest.je/1/medal/get/?user=9dae1fdbeace59c2008d388d6d3cf242&earned=true](http://api.feest.je/1/medal/get/?user=9dae1fdbeace59c2008d388d6d3cf242&earned=true)
+- **event**, [http://api.feest.je/1/event/rsvp/](http://api.feest.je/1/event/rsvp/) with post data "event=113421c0d5bf160a82755f501eb17fe8"
+This call signs the user up for the event with id '113421c0d5bf160a82755f501eb17fe8'
