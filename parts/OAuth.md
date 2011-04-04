@@ -9,7 +9,7 @@ We use this protocol to keep you from having a hard time creating login-scripts 
 
 Getting started
 ---------------
-Allright, let's get to it. To use all the features that the Feest.Je API has to offer, you first need to follow a few simple steps.
+Alright, let's get to it. To use all the features that the Feest.Je API has to offer, you first need to follow a few simple steps.
 
 The first step we need to go trough is to authenticate the user. This however, is only necessary if the user is not already logged in. How do you check this?
 Well, you do not. Whether the user is logged in or not, it does not really matter. You just redirect the user to the following URL and we take care of everything
@@ -17,7 +17,7 @@ there.
 
 	http://api.feest.je/oauthspul/?parameters
 	
-We will check here if the user is allready logged in by using cookies that are stored on the users computer. Now, if the user was not logged in yet, we will show 
+We will check here if the user is already logged in by using cookies that are stored on the users computer. Now, if the user was not logged in yet, we will show 
 the user the following screen:
 
 	inlogschermhier
