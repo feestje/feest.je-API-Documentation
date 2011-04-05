@@ -40,11 +40,22 @@ If the user desided to give you permission however, we will also redirect the us
 	
 
 Now that the user is authenticated and your app is authorized, the only thing left to do is authenticating your app. To do this you need to send the authorization code
-and your apps secret to the Feest.Je API endpoint. You do this at (endpoint_url){theurl}. Below is an example of the call you will need to do to authenticate your app.
+and your app's secret to the Feest.Je API endpoint. You do this at (endpoint_url){theurl}. Below is an example of the call you will need to do to authenticate your app.
 
 	authenticateappexample
 	
 	
+If you send the right authentication code from your app and the right authorization code from the user, we will return an acces token for you.
+
+    accescodeplaatje
+
+Besides this acces token, the response contains the number of seconds that it will take for the token to expire. This number is stuffed in the expires parameter. Once this value reaches zero, you will have to go through the whole step of app authentication again. Remember however, that once the user authorizes your app, the user will not have to do this again.
+
+If the authenication of your app somehow failed, we will return the following error:
+
+    authenticationerrorplaatje
+
+
 
 
 	
