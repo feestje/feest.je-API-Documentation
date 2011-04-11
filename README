@@ -36,14 +36,3 @@ Todo (gesorteerd)
 RankingEvents.php
 RankingFriends.php
 RankingSpots.php
-
-Not todo:
-UserSpots.php
-AccountAutologin.php
-AccountRegister.php
-DealPhoto.php
-DealPut.php
-ExchangeToken.php
-RelationRequests.php
-UsersMatch.php
-OauthDebug.php
