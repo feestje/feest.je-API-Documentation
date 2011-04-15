@@ -77,7 +77,7 @@ Step 2: Enter stage left; the user
 Finally, it's time for the user to do something! In this step we'll send the user to the feest.je site for authorization, passing along our temporary user_token and callback url, so the server knows who we are and we know when the user is done.
 This really is the easiest part of OAuth. All you have to do is redirect the user to **https://feest.je/oauth/authorize** and pass the oauth_token we received in the previous step, and our callback url:
 
-    https://feest.je/oauth/authorize?oauth_token=73d5de2cb3e2563c3f0416433236d81f0c00303c&callback=http:%2F%2Flocalhost%2Fcallback
+    https://feest.je/oauth/authorize?oauth_token=73d5de2cb3e2563c3f0416433236d81f0c00303c&callback=http:%2F%2Flocalhost%2Foauth_callback
 
 **Don't forget to url-encode your callback url!**
 
